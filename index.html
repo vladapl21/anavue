@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title> <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"> <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"> <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="grid-container"> <!-- Header -->
+    <header class="header">
+      <div class="menu-icon" onclick="openSidebar()"> <span class="material-icons-outlined">menu</span> </div>
+      <div class="header-right"> <span class="material-icons-outlined">notifications</span> <span
+          class="material-icons-outlined">account_circle</span> </div>
+    </header> <!-- End Header --> <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand"> <!--<span class="material-icons-outlined">home</span> <h1>anavue<h1>--> <img
+            align="center" src="Screenshot 2024-04-23 221112.png" width="160x"> </div> <span
+          class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+      <ul class="sidebar-list">
+        <li class="sidebar-list-item"> <a href="index.html" target="_self"> <span
+              class="material-icons-outlined">dashboard</span> Example 1 </a> </li>
+        <li class="sidebar-list-item"> <a href="ex2.html" target="_self"> <span
+              class="material-icons-outlined">fact_check</span> Example 2 </a> </li>
+      </ul>
+    </aside> <!-- End Sidebar -->
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <h2>DASHBOARD -- Prototype 1 (Example client)</h2>
+      </div>
+      <div class="main-cards">
+        <div class="card">
+          <div class="card-inner">
+            <h3>CUSTOMER COUNT</h3> <span class="material-icons-outlined">inventory_2</span>
+          </div>
+          <h1>250</h1>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <h3>AVERAGE TIME SPENT IN STORE</h3> <span class="material-icons-outlined">category</span>
+          </div>
+          <h1>59.40 s</h1>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <h3>REVENUE</h3> <span class="material-icons-outlined">groups</span>
+          </div>
+          <h1>$14,621.33</h1>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <h3>ALERTS</h3> <span class="material-icons-outlined">notification_important</span>
+          </div>
+          <h1>56</h1>
+        </div>
+      </div>
+      <div class="charts">
+        <div class="charts-card">
+          <h2 class="chart-title">Products Sold by category</h2>
+          <div id="bar-chart"></div>
+        </div>
+        <div class="charts-card">
+          <h2 class="chart-title">Sales by employee</h2>
+          <div id="area-chart"></div>
+        </div>
+        <div class="charts-card">
+          <h2 class="chart-title">Store Heatmap with Background</h2>
+          <div id="area-chart"></div> <img src="HeatmapWithBackground.png" width="640">
+        </div>
+        <div class="charts-card">
+          <h2 class="chart-title">Live Video Example</h2>
+          <div id="bar-chart"></div> <video width="440" height="340" controls>
+            <source src="object_counting_output (4).mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="dwell-time-container">
+          <h2>Dwell Time Information (powered by our own API)</h2>
+          <h3>Please draw a square or rectangle below and press the button to calculate the wait time in that region of
+            the store</h3>
+          <div id="dwell-time-output">Dwell Time: <span id="dwell-time-value">Not Calculated Yet</span></div> <canvas
+            id="selectionCanvas" width="640" height="480" style="border:1px solid #000;"></canvas>
+          <div id="coordinates-display"></div> <button id="confirmButton"
+            style="background-color:#F3F3F3;color:#303841;border-radius:8px;">Calculate Dwell Time</button> <button
+            id="cancelButton" style="background-color:#F3F3F3;color:#303841;border-radius:8px;">Reset</button>
+        </div>
+        <div class="charts-card">
+          <h2 class="chart-title">External Live View Example</h2>
+          <div id="area-chart"></div> <video width="440" controls>
+            <source src="object_counting_output (3).mp4" type="video/mp4">
+          </video> <video width="440" height="400" controls>
+            <source src="object_counting_output (3).avi" type="video/mp4">
+          </video>
+        </div>
+        <!--<div class="dwell-time-container">                                                                                                                                                                 <h2>Dwell Time Information</h2>                                                                                                                                                                      <div id="dwell-time-output"></div>                                                                                                                                                                   <canvas id="selectionCanvas" width="640" height="480" style="border:1px solid #000;"></canvas>                                                                                                       <div id="coordinates-display"></div>                                                                                                                                                                 <button id="confirmButton">Yes</button>                                                                                                                                                              <button id="cancelButton">No</button>                                                                                                                                                              </div>-->
+      </div>
+    </main> <!-- Custom JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
