@@ -30,4 +30,4 @@ Maintaining privacy for our customers especially in our sector is crucial, thatâ
 
 <img src="anavue3.png" width="600" />
 
-Above is an image of the Dwell Time calculator I deveolped. A relatively simple JavaScript function allows the user to draw a rectangle over an image of their store, sending the coordinates, height, and width of the rectangle to an external Python script that can calculate dwell time information via the Yolov8 library using the original security footage and area of focus dictated by the front-end user selection.
+Above is an image of the Dwell Time calculator we deveolped. A relatively simple JavaScript function allows the user to draw a rectangle over an image of their store, sending the coordinates, height, and width of the rectangle to an external Python script that can calculate dwell time information via the Yolov8 library using the original security footage and area of focus dictated by the front-end user selection.
