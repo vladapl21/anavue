@@ -28,6 +28,6 @@ Distribution is key – making data we provide easy to understand and implement 
 Maintaining privacy for our customers especially in our sector is crucial, that’s why we will allow our customers to integrate their surveillance footage directly into our secure network, allowing them to manage their business intelligence and security needs on one platform.
 
 
-<img src="anavue3.png" width="300" />
+<img src="anavue3.png" width="0.6vw" />
 
 Above is an image of the Dwell Time calculator I deveolped. A relatively simple JavaScript function allows the user to draw a rectangle over an image of their store, sending the coordinates, height, and width of the rectangle to an external Python script that can calculate dwell time information via the Yolov8 library using the original security footage and area of focus dictated by the front-end user selection.
